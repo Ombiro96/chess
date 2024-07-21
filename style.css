@@ -10,13 +10,12 @@ body {
 
 #root {
     display: grid;
-    grid-template-columns: repeat(8, 4em); /* Use fractional units for responsiveness */
-    grid-template-rows: repeat(8, 4em);    /* Use fractional units for responsiveness */
+    grid-template-columns: repeat(8, 4em);
+    grid-template-rows: repeat(8, 4em);
     gap: 0;
     border: 5px solid limegreen;
-    /* margin: 20px; */
-    max-width: 80vw; /* Adjust maximum width for better responsiveness */
-    max-height: 80vh; /* Adjust maximum height for better responsiveness */
+    max-width: 80vw;
+    max-height: 80vh;
 }
 
 .square {
@@ -36,16 +35,39 @@ body {
 }
 
 .piece {
-    width: 80%; /* Adjust size relative to the square */
-    height: 80%; /* Adjust size relative to the square */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em; /* Use relative units for font size */
-    color: limegreen;
+    width: 80%;
+    height: 80%;
 }
 
 .selected {
     border: 2px solid red;
     outline: none;
+}
+
+@media (max-width: 768px) {
+    #root {
+        grid-template-columns: repeat(8, 3em);
+        grid-template-rows: repeat(8, 3em);
+        max-width: 90vw;
+        max-height: 90vh;
+    }
+
+    .piece {
+        width: 70%;
+        height: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    #root {
+        grid-template-columns: repeat(8, 2em);
+        grid-template-rows: repeat(8, 2em);
+        max-width: 95vw;
+        max-height: 95vh;
+    }
+
+    .piece {
+        width: 60%;
+        height: 60%;
+    }
 }
