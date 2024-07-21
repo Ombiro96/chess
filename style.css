@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(to bottom, black, white);
+    background-size: cover;
+}
+
+#root {
+    display: grid;
+    grid-template-columns: repeat(8, 4em); /* Use fractional units for responsiveness */
+    grid-template-rows: repeat(8, 4em);    /* Use fractional units for responsiveness */
+    gap: 0;
+    border: 5px solid limegreen;
+    /* margin: 20px; */
+    max-width: 80vw; /* Adjust maximum width for better responsiveness */
+    max-height: 80vh; /* Adjust maximum height for better responsiveness */
+}
+
+.square {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square.light {
+    background-color: #fff;
+}
+
+.square.dark {
+    background-color: brown;
+}
+
+.piece {
+    width: 80%; /* Adjust size relative to the square */
+    height: 80%; /* Adjust size relative to the square */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em; /* Use relative units for font size */
+    color: limegreen;
+}
+
+.selected {
+    border: 2px solid red;
+    outline: none;
+}
